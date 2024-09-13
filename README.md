@@ -5,7 +5,7 @@ This API provides access to a movie database sourced from IMDB. You can retrieve
 ## Available Routes
 
 ### 1. `/api/movies`
-- Returns a list of up to 18 movies with a count of the total.
+- Returns a list of up to 12 movies with a count of the total.
 - Accepts the following query parameters:
   - `title` (string): Filter movies by title.
   - `runtimeMin` (number): Minimum runtime of the movies.
@@ -62,7 +62,7 @@ Cette API permet d'accéder à une base de données de films provenant d'IMDB. V
 ## Routes disponibles
 
 ### 1. `/api/movies`
-- Renvoie une liste de jusqu'à 18 films avec un nombre total.
+- Renvoie une liste de jusqu'à 12 films avec un nombre total.
 - Accepte les paramètres suivants :
   - `title` (string): Filtrer les films par titre.
   - `runtimeMin` (number): Durée minimale des films.
@@ -119,7 +119,7 @@ Essa API fornece acesso a um banco de dados de filmes retirados do IMDB. Você p
 ## Rotas Disponíveis
 
 ### 1. `/api/movies`
-- Retorna uma lista de até 18 filmes com um contador do total.
+- Retorna uma lista de até 12 filmes com um contador do total.
 - Aceita os seguintes parâmetros de consulta:
   - `title` (string): Filtra os filmes pelo título.
   - `runtimeMin` (number): Duração mínima dos filmes.
