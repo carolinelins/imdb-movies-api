@@ -2,7 +2,7 @@ import pool from '../config/db'
 import { MovieFiltersInterface, MovieInterface } from '../interfaces/movieInterface'
 
 async function getMovies(filters: MovieFiltersInterface, sort?: string, page: number = 0): Promise<MovieInterface[]> {
-  const limit = 18
+  const limit = 12
   const offset = page * limit
 
   const query = `

@@ -14,3 +14,8 @@ export interface MovieInterface {
   rating: number
   poster?: string
 }
+
+export interface MoviePosterInterface {
+  tconst: string
+  poster: string | null
+}
