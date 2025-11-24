@@ -1,6 +1,17 @@
 import { Request, Response } from 'express'
-import { getGenresService, getMoviePostersService, getMoviesService } from '../services/movieService'
+import { getGenresService, getMoviePostersService, getMoviesService, getRecommendedMoviesService } from '../services/movieService'
 import { MovieFiltersInterface } from '../interfaces/movieInterface'
+import { MovieInterface } from '../interfaces/movieInterface'
+
+async function getRecommendationsController(req: Request, res: Response): Promise<void> {
+  try {
+    const clickedMovies: MovieInterface[] = JSON.parse(req.query.clicked as string || '[]')
+    const recommendations = await getRecommendedMoviesService(clickedMovies)
+    res.status(200).json(recommendations)
+  } catch (error) {
+    res.status(500).json({ error: (error as Error).message })
+  }
+}
 
 async function getMoviesController(req: Request, res: Response): Promise<void> {
   const {
@@ -52,5 +63,6 @@ async function getMoviePostersController(req: Request, res: Response): Promise<v
 export {
   getMoviesController,
   getGenresController,
-  getMoviePostersController
+  getMoviePostersController,
+  getRecommendationsController
 }
